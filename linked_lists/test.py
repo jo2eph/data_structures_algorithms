@@ -1,5 +1,5 @@
 """
-Tests for linked list.
+Tests for linked list
 """
 
 from linked_list import LinkedList
@@ -57,3 +57,18 @@ def test_linked_list_insert_at_end():
     ll.insert(5, 3)  # Insert 3 at index 5 (end)
 
     assert ll.to_list() == [1, 2, 3]
+
+
+def test_linked_list_insert_negative_index():
+    ll = LinkedList()
+    ll.append(2)
+    ll.append(3)
+    ll.insert(-1, 1)  # Insert 1 at index -1 (head)
+
+    assert ll.to_list() == [1, 2, 3]
+
+
+def test_linked_list_from_list():
+    ll = LinkedList([1, 2, 3])
+    assert ll.to_list() == [1, 2, 3]
+    assert len(ll) == 3

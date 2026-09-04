@@ -2,6 +2,8 @@
 Implementation of a singly linked list in Python.
 """
 
+from collections.abc import Iterable
+
 class Node:
     """
     Node class represents a single node in a linked list.
@@ -47,12 +49,18 @@ class LinkedList:
 
     """
 
-    # Constructor to intialize 
-    def __init__(self):
+    # Constructor 
+    def __init__(self, lst=None):
         self.head = None
         self.length = 0
-    
 
+        # If a list is provided, initialize the linked list with its elements
+        if lst is not None:
+            self.from_list(lst)
+            self.length = len(lst)
+    
+    
+    # String representation
     def __repr__(self):
         str_repr = "HEAD: "
         current = self.head
@@ -65,6 +73,7 @@ class LinkedList:
         return str_repr
 
 
+    # Length of the linked list
     def __len__(self):
         return self.length
 
@@ -137,7 +146,3 @@ class LinkedList:
 
         for item in lst:
             self.append(item)
-
-
-    
-
