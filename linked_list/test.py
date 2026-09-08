@@ -54,9 +54,11 @@ def test_linked_list_insert_at_end():
     ll = LinkedList()
     ll.append(1)
     ll.append(2)
-    ll.insert(5, 3)  # Insert 3 at index 5 (end)
+    ll.append(-1)
+    ll.insert(index=5, data=3)  # Insert 3 at index 5 (end)
 
-    assert ll.to_list() == [1, 2, 3]
+    assert ll.to_list() == [1, 2, -1, 3]
+    assert len(ll) == 4
 
 
 def test_linked_list_insert_negative_index():
@@ -66,6 +68,7 @@ def test_linked_list_insert_negative_index():
     ll.insert(-1, 1)  # Insert 1 at index -1 (head)
 
     assert ll.to_list() == [1, 2, 3]
+    assert len(ll) == 3
 
 
 def test_linked_list_from_list():

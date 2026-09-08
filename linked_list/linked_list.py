@@ -4,9 +4,10 @@ Implementation of a singly linked list in Python.
 
 from collections.abc import Iterable
 
+
 class Node:
     """
-    Node class represents a single node in a linked list.
+    Node class represents a node in a linked list.
     """
     def __init__(self, data):
         self.data = data
@@ -46,7 +47,6 @@ class LinkedList:
     >>> my_linked_list.append(3)
     >>> print(my_linked_list)
     HEAD: 1 -> 2 -> 3 -> NULL
-
     """
 
     # Constructor 
@@ -109,6 +109,8 @@ class LinkedList:
         if index <= 0:
             new_node.next = self.head
             self.head = new_node
+
+            self.length += 1
         elif index >= self.length:
             self.append(data)
         
@@ -119,13 +121,14 @@ class LinkedList:
                 current = current.next
             new_node.next = current.next
             current.next = new_node
-        
-        self.length += 1
+
+            self.length += 1
 
 
     def to_list(self) -> list:
         """
         Convert the linked list to a Python list.
+        The head node becomes the first element (index 0) of the list.
         """
 
         list_representation = []
@@ -141,7 +144,7 @@ class LinkedList:
 
     def from_list(self, lst) -> None:
         """
-        Convert a Python list to a linked list.
+        Convert a Python list to a linked list, where the first element of the list becomes the head.
         """
 
         for item in lst:
