@@ -3,6 +3,7 @@ Tests for dynamic array
 """
 
 from dynamic_array import *
+import pytest
 
 def test_dynamic_array_initialization():
     my_array = DynamicArray()

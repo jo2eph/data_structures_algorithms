@@ -3,6 +3,7 @@ Tests for binary tree
 """
 
 from binary_tree import *
+import pytest
 
 def test_binary_tree_initialization():
     bt = BinaryTree()

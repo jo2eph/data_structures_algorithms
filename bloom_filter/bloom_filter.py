@@ -13,4 +13,6 @@ class BloomFilter:
     https://www.geeksforgeeks.org/python/bloom-filters-introduction-and-python-implementation/
     """
     
+    def __init__(self):
+        pass
     

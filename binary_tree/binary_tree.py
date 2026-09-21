@@ -127,7 +127,7 @@ class BinaryTree:
         elif order == 'post-order':
             return self._post_order_traversal(self.root)
         else:
-            raise ValueError("Invalid traversal order. Choose from 'in-order', 'pre-order")
+            raise ValueError("Invalid traversal order. Choose from 'in-order', 'pre-order', 'post-order'")
         
     
     def _in_order_traversal(self, node):
