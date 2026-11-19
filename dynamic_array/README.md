@@ -23,6 +23,6 @@
 
 ## Dynamic Arrays: The Idea
 
-
+- 
 
 ---

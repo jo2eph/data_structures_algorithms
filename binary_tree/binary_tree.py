@@ -85,7 +85,8 @@ class BinaryTree:
     def __init__(self, root=None):
         self.root = root
 
-    
+    # ---------------------------------------------
+
     def insert(self, value):
         """
         Inserst a new node into the binary tree.
@@ -129,6 +130,7 @@ class BinaryTree:
         else:
             raise ValueError("Invalid traversal order. Choose from 'in-order', 'pre-order', 'post-order'")
         
+    # ---------------------------------------------
     
     def _in_order_traversal(self, node):
         """
